@@ -30,7 +30,7 @@ func usage() string  { return usageText[1:] }
 func main() {
 	fmt.Println("Checker entrypoint!")
 
-	var f flags
+	f := &flags{}
 	if err := f.parse(); err != nil {
 		fmt.Println(usage())
 		log.Fatal(err)
